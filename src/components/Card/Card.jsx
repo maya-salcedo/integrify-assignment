@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { ButtonLink } from '../Button/Button';
 import { UserProfile } from '../UserProfile/UserProfile';
+import CardWrapper from './Styles';
 
 export function Card() {
   const [users, setUsers] = useState();
@@ -19,19 +20,18 @@ export function Card() {
   }, []);
 
   return (
-    <div>
+    <>
       {users?.length > 0 &&
         users.map((user) => {
           return (
-            <div key={user.id}>
-              <h1>{user.name}</h1>
-              <p>{user.username}</p>
-              <p>{user.website}</p>
-              <ButtonLink to="/1" />
-            </div>
+            <CardWrapper key={user.id}>
+              <CardWrapper.Name>{user.name}</CardWrapper.Name>
+              <CardWrapper.UserName>{user.username}</CardWrapper.UserName>
+              <CardWrapper.Website>{user.website}</CardWrapper.Website>
+              <ButtonLink userId={user.id} />
+            </CardWrapper>
           );
         })}
-      <UserProfile />
-    </div>
+    </>
   );
 }
