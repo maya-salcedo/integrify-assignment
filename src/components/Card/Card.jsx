@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { ButtonLink } from '../Button/Button';
-import { UserProfile } from '../UserProfile/UserProfile';
 import CardWrapper from './Styles';
 
 export function Card() {

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Card } from './components/Card/Card';
 import { UserProfile } from './components/UserProfile/UserProfile';

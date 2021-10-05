@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import UserWrapper from './Styles';
 import CardWrapper from '../Card/Styles';
+import Link from '../Button/Styles';
 
 export function UserProfile() {
   const { user_id } = useParams();
@@ -42,6 +43,7 @@ export function UserProfile() {
           Zipcode: {user?.address?.zipcode} <br />
         </CardWrapper.Text>
       </CardWrapper.Box>
+      <Link to="/">Go back</Link>
     </UserWrapper>
   );
 }

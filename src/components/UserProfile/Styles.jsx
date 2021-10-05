@@ -5,7 +5,7 @@ import CardWrapper from '../Card/Styles';
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
