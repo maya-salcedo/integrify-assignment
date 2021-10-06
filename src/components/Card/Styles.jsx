@@ -33,6 +33,10 @@ const Avatar = styled.img`
 const Name = styled.h1`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 377px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const UserName = styled.p`
