@@ -15,7 +15,7 @@ export function Card() {
     setIsLoading(true);
     try {
       const { data } = await axios.get(
-        `https://jsonplaceholder.typicode.com/users`
+        'https://jsonplaceholder.typicode.com/users'
       );
       setUsers(data);
       setIsLoading(false);
@@ -46,7 +46,7 @@ export function Card() {
                   />
                   <CardWrapper.Name>{user.name}</CardWrapper.Name>
                   <CardWrapper.UserName>@{user.username}</CardWrapper.UserName>
-                  <CardWrapper.Website href={`https://${user.website}`}>
+                  <CardWrapper.Website href="#">
                     https://{user.website}
                   </CardWrapper.Website>
                   <ButtonLink userId={user.id} />
