@@ -56,7 +56,7 @@ CardWrapper.Card = function CardWrapperCard({ children }) {
 };
 
 CardWrapper.Avatar = function CardWrapperAvatar({ src }) {
-  return <Avatar src={src} />;
+  return <Avatar src={src} alt="avatar" />;
 };
 
 CardWrapper.Name = function CardWrapperName({ children }) {
