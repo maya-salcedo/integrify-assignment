@@ -10,11 +10,15 @@ export function UserProfile() {
   const [user, setUser] = useState({});
 
   const getData = async () => {
-    const { data } = await axios.get(
-      `https://jsonplaceholder.typicode.com/users/${user_id}`
-    );
+    try {
+      const { data } = await axios.get(
+        `https://jsonplaceholder.typicode.com/users/${user_id}`
+      );
 
-    setUser(data);
+      setUser(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {

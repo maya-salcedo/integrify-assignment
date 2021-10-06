@@ -8,10 +8,14 @@ export function Card() {
   const [users, setUsers] = useState();
 
   const getData = async () => {
-    const { data } = await axios.get(
-      `https://jsonplaceholder.typicode.com/users`
-    );
-    setUsers(data);
+    try {
+      const { data } = await axios.get(
+        `https://jsonplaceholder.typicode.com/users`
+      );
+      setUsers(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
