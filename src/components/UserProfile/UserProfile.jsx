@@ -4,6 +4,8 @@ import axios from 'axios';
 import UserWrapper from './Styles';
 import CardWrapper from '../Card/Styles';
 import Link from '../Button/Styles';
+import { ErrorContainer } from '../Error/Error';
+import { LoadingContainer } from '../Loading/Loading';
 
 export function UserProfile() {
   const { user_id } = useParams();
@@ -31,9 +33,9 @@ export function UserProfile() {
   }, []);
   return (
     <UserWrapper>
-      {isError && <h1> ERROR </h1>}
+      {isError && <ErrorContainer />}
       {isLoading ? (
-        <h1>LOADING </h1>
+        <LoadingContainer />
       ) : (
         <CardWrapper.Box>
           <CardWrapper.Title>Name: {user.name}</CardWrapper.Title>
